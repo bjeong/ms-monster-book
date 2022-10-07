@@ -1,0 +1,198 @@
+/* Fonts are loaded via Monotype. See the head section in index.html for details.  */
+@font-face{
+  font-family: 'Maplestory OTF Light';
+  src: url("fonts/Maplestory\ OTF\ Light.otf") format("opentype");
+
+}
+
+@font-face{
+  font-family: 'Sequel Sans';
+  src: url("fonts/Sequel\ Sans\ Light\ Head.otf") format("opentype"),
+  url("fonts/Sequel\ Sans\ Medium\ Disp.otf") format("opentype"),
+  url("fonts/Sequel\ Sans\ Light\ Disp.otf") format("opentype");
+}
+
+body{
+    text-align: center;
+    margin: 0;
+    font-family: 'Sequel Sans';
+    font-weight: 400;
+  background-color: #383838;
+  color: #ecfefd;
+}
+
+#page {
+  padding-left: 10%;
+  padding-right: 10%;
+    display: flex;
+    flex-direction: column;
+
+        align-items: center;
+        justify-content: center
+}
+
+h1{
+  font-family: 'Maplestory OTF Light';
+}
+
+h3{
+margin-bottom: 3rem;
+
+    font-family: 'Sequel Sans';
+}
+
+#menu, #content{  
+  display: flex; 
+  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-bottom: 3rem;
+
+}
+
+/* Each menuitem has a rounded corners and pointer cursor applied  */
+#menu a{ 
+  font-size: 24px;
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: #ecfefd;
+  font-family: 'Maplestory OTF Light';
+} 
+
+/* setup a simple hover effect on the menu.*/
+#menu a:hover{ 
+  color: #eee;
+  background: #000;  
+}
+
+/* JavaScript dynamically assigns the "selected" class to a clicked menuitem */
+ #menu .selected{
+   color: black;
+   background: white;
+   font-style: bold;
+ }
+
+.monster{
+  background-color: #218fa0;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;  
+  border-radius: .4rem;
+  border-style: double;
+  border-width: 6px;
+  border-color: #383838; 
+  color: #383838;
+  box-shadow: 6px 8px #1a1a1a;
+  
+/*   text-shadow: .7px .7px  #d6d6d6; */
+/*  
+  width: 134px;
+  height: 212px; */
+  width:165px;
+  height:260px;
+  font-size: 17px;
+  font-style: bold;
+  justify-content: center;
+
+}
+
+
+/* Neutral/Hover states */
+.monster .name{
+  font-family: 'Maplestory OTF Light';
+}
+.monster .stats{  display:none; }
+.monster .rewards{  display:none; }
+.monster .maxHp{  display:none;}
+.monster .attack{  display:none}
+.monster:hover .name{ 
+  display: block;
+  margin-top:-.2rem;
+  font-family: 'Maplestory OTF Light';
+  margin-bottom: 35px;
+}
+.monster:hover .monstericon{ 
+  display: block; 
+  line-height: .001%;
+  max-height: 50px;
+  max-width: 50px;
+/*padding-left: 2.5rem; */
+  margin-top:1.3rem;
+}
+.monster:hover .staticon{
+  vertical-align:middle;
+  display:inline-flex;
+  max-height: 20px;
+  max-width:20px;
+  border: 0;
+  float:left;
+}
+
+.monster:hover .stats{                   
+  display: inline-flex;
+  align-items:center;
+  margin-top: -35px;
+  margin-left: -2rem;
+}
+.monster:hover .rewards{  
+  display: inline-flex;
+  align-items:center;
+  margin-top: -35px;
+  margin-left: -2rem;
+}
+.monster:hover .maxHp{              
+  display: inline-flex;
+  align-items:center;
+  margin-top: -35px;
+  margin-left: -2rem;
+}        
+.monster:hover .attack{                   
+  display: inline-flex;
+  margin-top: -35px;
+  align-items:center;
+  margin-left: -2rem;
+}
+.monster:hover {
+  background-color: #124b54;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+img{
+max-height: 110px;
+max-width: 110px;
+  width: auto;
+  height: auto;
+object-fit: contain;
+padding-left: .8rem;
+margin: 1rem;
+/* border-style: solid;
+  border-color: #888888;
+  border-width: .25px;
+  border-radius: .25rem; */
+}
+
+/*  Styling title image */
+.msicon{
+   max-height: 90px;
+}
+
+
+.icon{
+  margin-left: -90px;
+  flex-basis: 60%;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  styling stat icons  */
+.staticon{
+  max-height: 5px;
+  margin-right: 2px;
+}
